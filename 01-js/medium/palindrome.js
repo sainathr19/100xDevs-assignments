@@ -4,7 +4,23 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  str = str.toLowerCase();
+  let str2 = "";
+
+  //Removing spaces and special characters
+  for (i = 0; i < str.length; i++) {
+    if (/^[a-z]/i.test(str[i])) {
+      str2 += str[i];
+    }
+  }
+  let rev = "";
+
+  for (i = str2.length - 1; i >= 0; i--) {
+    rev += str2[i];
+  }
+  return rev === str2;
 }
 
 module.exports = isPalindrome;
+
+//Solved
