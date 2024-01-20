@@ -13,11 +13,13 @@ function isPalindrome(str) {
       str2 += str[i];
     }
   }
+  //Obtaining the reverse of string in bruteforce approach
   let rev = "";
-
   for (i = str2.length - 1; i >= 0; i--) {
     rev += str2[i];
   }
+
+  //validating
   return rev === str2;
 }
 
